@@ -21,7 +21,7 @@ def add_employee(e_id, e_type, name, age, contact_number):
 
     if employee_exists(employee) == False:
         employee_list.append(employee)
-        add_block(e_type)
+        add_block(employee)
     else:
         print(f'Employee: {employee} already exists!' + '\n')
 

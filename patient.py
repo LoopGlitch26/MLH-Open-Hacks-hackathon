@@ -12,8 +12,6 @@ def check_patient_detail(patient):
 
 def add_patient(p_id, name, age, contact_number, doctor_name, disease, address=None):
 
-    p_type = 'patient'
-
     if address is None:
         address = ''
 
@@ -29,7 +27,7 @@ def add_patient(p_id, name, age, contact_number, doctor_name, disease, address=N
 
     if check_patient_detail(patient) == False:
         patient_list.append(patient)
-        add_block(p_type)
+        add_block(patient)
     else:
         print(f'Patient: {patient} already exists!' + '\n')
 
