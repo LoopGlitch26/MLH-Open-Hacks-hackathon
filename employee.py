@@ -10,7 +10,10 @@ def employee_exists(employee):
     return True
 
 
-def add_employee(e_id, e_type, name, age, contact_number):
+def add_employee(e_id, e_type, name, age, contact_number=None):
+    if contact_number == None:
+        contact_number = 0
+    
     employee = {
         'employee_id': e_id,
         'employee_type': e_type.lower(),

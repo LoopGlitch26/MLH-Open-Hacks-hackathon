@@ -1,13 +1,14 @@
 import json
+import pickle
 
 def save_block(block=None, filename=None):
     from block import main_block
 
     if filename is None:
-        filename = 'output.json'
+        filename = 'output.block'
 
-    with open(filename, mode='w') as outfile:
+    with open(filename, mode='wb') as outfile:
         save_data = {
             'chain': main_block
         }
-        json.dump(save_data, outfile)
+        outfile.write(pickle.dumps(save_data))
